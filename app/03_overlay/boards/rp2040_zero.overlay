@@ -1,0 +1,15 @@
+#include <zephyr/dt-bindings/led/led.h>
+
+&ws2812 {
+	chain-length = <8>;
+
+	color-mapping = <LED_COLOR_ID_RED     /* a placa manda GRB: trocar aqui sai cor errada */
+			 LED_COLOR_ID_GREEN
+			 LED_COLOR_ID_BLUE>;
+};
+
+/* terceira mudanca, se der tempo: descomentar e ler o erro de compilacao
+&ws2812 {
+	status = "disabled";
+};
+*/

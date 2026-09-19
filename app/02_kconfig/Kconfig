@@ -1,0 +1,22 @@
+mainmenu "Demonstracao 2 - Kconfig"
+
+choice
+	prompt "Cor do pisca"
+	default COR_VERMELHO
+
+config COR_VERMELHO
+	bool "Vermelho"
+
+config COR_VERDE
+	bool "Verde"
+
+config COR_AZUL
+	bool "Azul"
+
+endchoice
+
+config PISCA_MS
+	int "Meio periodo do pisca, em ms"
+	default 500
+
+source "Kconfig.zephyr"
